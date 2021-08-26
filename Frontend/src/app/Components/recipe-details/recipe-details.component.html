@@ -1,0 +1,73 @@
+<mat-toolbar color="accent" class="page-bar">
+    <h1 style="text-align: center;">{{currentRecipe.meals[0].strMeal}}</h1>
+</mat-toolbar>
+<div *ngFor="let meal of currentRecipe.meals" class="sm-flex-column">
+    <div class="sm-col-12">
+        <mat-card class="recipe-info">
+            <mat-card-title>{{meal.strArea}} </mat-card-title>
+            <mat-card-subtitle> {{meal.strCategory}} </mat-card-subtitle>
+            <h1 style="text-align: center;"> Instructions</h1>
+            <mat-card class="sides">
+                <mat-card-content class="sides-text"> {{meal.strInstructions}} </mat-card-content>
+            </mat-card>
+            <div class=" recipe-controls">
+                <a mat-raised-button color="warn" href={{meal.strYoutube}} target="_blank"> Watch Instruction Video</a>
+
+            </div>
+        </mat-card>
+
+    </div>
+
+    <div>
+
+        <mat-card class=" recipe-ingredients">
+            <h1 style="text-align: center;"> Ingredients</h1>
+            <mat-list role="list">
+
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure1}} </b> {{meal.strIngredient1}} </mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure2}} </b> {{meal.strIngredient2}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure3}} </b> {{meal.strIngredient3}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure4}} </b> {{meal.strIngredient4}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure5}} </b> {{meal.strIngredient5}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure6}} </b> {{meal.strIngredient6}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure7}} </b> {{meal.strIngredient7}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure8}} </b> {{meal.strIngredient8}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure9}} </b> {{meal.strIngredient9}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure10}} </b>{{meal.strIngredient10}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure11}} </b> {{meal.strIngredient11}} </mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure12}} </b> {{meal.strIngredient12}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure13}} </b> {{meal.strIngredient13}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure14}} </b> {{meal.strIngredient14}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure15}} </b> {{meal.strIngredient15}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure16}}</b> {{meal.strIngredient16}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure17}}</b> {{meal.strIngredient17}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure18}}</b> {{meal.strIngredient18}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure19}}</b> {{meal.strIngredient19}}</mat-list-item>
+                <mat-divider [inset]="true"></mat-divider>
+                <mat-list-item role="listitem"> <b>{{meal.strMeasure20}}</b>{{meal.strIngredient20}}</mat-list-item>
+
+
+            </mat-list>
+
+        </mat-card>
+
+    </div>
+</div>

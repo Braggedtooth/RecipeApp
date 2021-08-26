@@ -1,0 +1,54 @@
+.card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+/* Add some padding inside the card container */
+
+.container {
+    margin-top: 10px;
+    padding: 2px 16px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.firstEl {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/*
+.secondEL {
+    align-self: flex-end;
+} */
+
+.default-list-radio {
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+    align-self: flex-end;
+}
+
+.default-list-radiobtn {
+    margin: 5px;
+}
+
+.listStyle {
+    cursor: pointer;
+}

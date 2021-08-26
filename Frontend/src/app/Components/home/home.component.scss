@@ -1,0 +1,37 @@
+        @import '../../styles/colors.scss';
+        .mat-tab-group {
+            margin-bottom: 48px;
+        }
+        
+        .mat-card {
+            padding: 10em !important;
+        }
+        
+        .recipe-grid {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-content: space-between;
+            flex-wrap: wrap;
+        }
+        
+        .recipe-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            width: 20em;
+            max-height: 300px;
+            min-height: 300px;
+            padding: 0.2em;
+            margin-bottom: 0.5em;
+            margin-left: 0.5em;
+            margin-top: 0.5em;
+        }
+        
+        .recipe-card img {
+            border-radius: 4px;
+            padding: 5px;
+            width: 150px;
+            border: 1px solid #6610f2;
+        }

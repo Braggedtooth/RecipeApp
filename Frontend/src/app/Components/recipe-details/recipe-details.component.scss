@@ -1,0 +1,48 @@
+.recipe-info {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.recipe-info h1 {
+    margin-bottom: 0;
+}
+
+.sides {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sides .sides-text {
+    margin: 1em;
+    padding: 1em;
+    line-height: 2.5;
+    text-align: center;
+    align-content: flex-end;
+}
+
+.grid {
+    display: flex;
+}
+
+.recipe-controls {
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-ingredients {
+    padding: 5em;
+}
+
+
+/* .recipe-ingredients img {
+    max-width: 40em;
+    height: 50%;
+    align-self: flex-start;
+    border-radius: 25px;
+} */
+
+.givebg {
+    background-color: grey;
+}

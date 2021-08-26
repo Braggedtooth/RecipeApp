@@ -1,0 +1,49 @@
+/* @import './styles/colors.scss';
+body {
+    background-color: $background;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    background-color: $primary;
+    margin: 0%;
+    padding: 1%;
+}
+
+.title {
+    margin: 0%;
+    padding: 0%;
+}
+
+.navigation {
+    color: $text-color;
+    list-style-type: none;
+    font-size: 1.2em;
+    align-self: flex-end;
+}
+
+.navigation a {
+    padding: 0.5em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $secondary;
+}
+
+.navigation a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    padding: 1em;
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s; 
+
+
+}
+
+*/
+
+.example-spacer {
+    flex: 1 1 auto;
+}

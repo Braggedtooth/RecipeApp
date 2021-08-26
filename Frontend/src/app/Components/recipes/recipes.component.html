@@ -1,0 +1,20 @@
+<mat-toolbar color="accent" class="page-bar">
+    <h1 style="text-align: center;">Recipes</h1>
+</mat-toolbar>
+<div class="recipe-grid">
+    <div *ngFor="let meal of  RecipeList.meals">
+        <mat-card class="recipe-card ">
+            <mat-card-header class=" recipe-name "> {{meal.strMeal}} </mat-card-header>
+            <img mat-card-image src={{meal.strMealThumb}} alt="image of{{meal.strMeal}} ">
+
+            <mat-card-actions>
+
+                <button mat-raised-button color="accent" [routerLink]="[meal.idMeal]">Show Recipe</button>
+                <button mat-raised-button color="accent" (click)="addFavoriteFunc(meal.idMeal,meal.strMeal)">Add To Favorite</button>
+            </mat-card-actions>
+
+
+        </mat-card>
+
+    </div>
+</div>

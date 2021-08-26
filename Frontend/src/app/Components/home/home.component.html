@@ -1,0 +1,48 @@
+<mat-tab-group backgroundColor=accent animationDuration="0ms ">
+    <mat-tab label="App Info">
+        <mat-card class="card-info">
+            <mat-card-header> U08 Angular Recipe App With Php Laravel Backend </mat-card-header>
+            <mat-card-content>
+                <p>
+                    A fun project that challenged in me in many ways, the page you are seeing right now is the second iteration. I learned a harsh lesson by accidentally deleteing the first iteration of this project and others without a backup and neglecting to push my commits.
+                    Lesson Learned! Anyways i had lots of fun navigateing through angular even though i went into it with a pretty narrow mindset, this project opened me up to understanding the why behind angular and respect it in many ways. The backend
+                    part was less of a challenge but it could have been done in a better way.
+                </p>
+                <mat-card-actions>
+                    <p><a routerLink="categories"> Browse Recipes</a> </p>
+                </mat-card-actions>
+
+            </mat-card-content>
+        </mat-card>
+    </mat-tab>
+    <mat-tab label="Search Recipes">
+        <mat-card>
+            <form>
+                <div class="input-group ">
+                    <input type="text" class="form-control" #input placeholder="search recipes" aria-label="Search Bar" aria-describedby="search for recipes">
+                    <div class="input-group-prepend">
+                        <button class="input-group-text" style="cursor: pointer; " (click)="searchRecipe(input.value)"> <mat-icon>search</mat-icon></button>
+                    </div>
+                </div>
+            </form>
+        </mat-card>
+        <div class="recipe-grid">
+            <div *ngFor="let meal of  querryRes.meals">
+                <div class="recipe-card ">
+                    <mat-card-header class=" recipe-name "> {{meal.strMeal}} </mat-card-header>
+                    <img mat-card-image src={{meal.strMealThumb}} alt="image of{{meal.strMeal}} ">
+
+                    <mat-card-actions>
+
+                        <button mat-raised-button color="accent" routerLink="recipe/{{meal.idMeal}}">Show Recipe</button>
+                        <!--  <button mat-raised-button color="accent" (click)="addFavoriteFunc(meal.idMeal,meal.strMeal)">Add To Favorite</button> -->
+                    </mat-card-actions>
+
+
+                </div>
+
+            </div>
+        </div>
+    </mat-tab>
+
+</mat-tab-group>

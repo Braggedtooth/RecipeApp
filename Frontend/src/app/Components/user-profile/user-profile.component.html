@@ -1,0 +1,82 @@
+<mat-toolbar color="accent" class="page-bar">
+    <h1 style="text-align: center;">Profile</h1>
+</mat-toolbar>
+<div class="container">
+
+
+    <mat-card>
+        <mat-spinner *ngIf="!isLoaded"> </mat-spinner>
+        <div>
+            <mat-card-header>
+                <mat-card-title class="card-title">Welcome {{UserProfile?.name}}!</mat-card-title>
+                <div *ngIf="alert" class="alert alert-warning mt-3 alert-dismissible fade show" role="alert">
+                    {{ alert }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </mat-card-header>
+            <mat-card-content class="card-body">
+                <div class="firstEl">
+                    <mat-card-title>
+                        <i> <mat-icon>manage_accounts</mat-icon></i> User Details
+
+                    </mat-card-title>
+                    <mat-card-content>
+                        <mat-card-title>
+                            <mat-icon style="float: left;">person</mat-icon><span color="primary" style="text-transform: uppercase; color:grey; ">{{UserProfile?.name}}</span></mat-card-title>
+
+                        <mat-card-title>
+                            <mat-icon style="float: left;">email</mat-icon><span style="text-transform: uppercase; color:grey;">{{UserProfile?.email}}</span></mat-card-title>
+                    </mat-card-content>
+
+
+                </div>
+                <div class="secondEL">
+                    <label id="Defaut Favorite List picker label">Pick Your Default List</label>
+                    <mat-radio-group aria-labelledby="Defaut Favorite List picker" class="default-list-radio" color="primary" [(ngModel)]="defaultList">
+                        <mat-radio-button class="default-list-radiobtn" *ngFor="let tab of tabs" color="warn" [value]="tab">
+                            <i style="color:rgb(4, 32, 44)!important; text-transform: capitalize;">{{tab}}</i>
+
+                        </mat-radio-button>
+                    </mat-radio-group>
+                    <button mat-raised-button (click)="setActiveList()" color="warn"> Set {{defaultList}} as Default</button>
+                </div>
+
+            </mat-card-content>
+            <div>
+
+                <div>
+
+
+                    <form>
+                        <div class="input-group mb-3">
+
+                            <input type="text" class="form-control" #input placeholder="List Name.." aria-label="Username" aria-describedby="new list">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon1" style="cursor: pointer;" (click)=" addTab(input.value)"> <mat-icon>post_add</mat-icon></span>
+                            </div>
+                        </div>
+                    </form>
+
+
+                </div>
+
+                <mat-tab-group backgroundColor="accent" [selectedIndex]="selected.value" (selectedIndexChange)="selected.setValue($event)">
+                    <mat-tab *ngFor="let tab of tabs; let index = index" [label]="tab">
+                        <mat-list backgroundColor="accent" role="list" *ngFor="let favorite of favorites">
+                            <mat-list-item role="listitem">{{favorite.recipe_name}} <i class="listStyle"> <mat-icon (click)="deleteFav(favorite.recipe_id)">delete</mat-icon></i></mat-list-item>
+
+                        </mat-list>
+                        <button mat-raised-button class="example-delete-tab-button" [disabled]="index === 0" (click)="removeTab(index)">Delete Tab </button>
+                    </mat-tab>
+                </mat-tab-group>
+
+
+
+
+
+
+
+            </div>
+        </div>
+
+    </mat-card>

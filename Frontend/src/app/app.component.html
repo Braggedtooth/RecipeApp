@@ -1,0 +1,32 @@
+<mat-toolbar>
+
+    <span style="cursor: pointer;" routerLink="/">U08 - RecipeApp</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+
+    <mat-menu #menu="matMenu">
+        <a mat-menu-item routerLink="categories">
+            <mat-icon>table_view</mat-icon><span>Browse Categories</span> </a>
+        <a mat-menu-item routerLink="profile" *ngIf="isSignedIn">
+            <mat-icon>account_circle</mat-icon><span>User Profile</span></a>
+        <a mat-menu-item *ngIf="!isSignedIn" routerLink="/login">
+            <mat-icon>login</mat-icon><span>Log in</span></a>
+        <a mat-menu-item *ngIf="!isSignedIn" routerLink="/register">
+            <mat-icon>app_registration</mat-icon>
+            <span>Register</span></a>
+        <button mat-menu-item class="btn btn-outline-primary" (click)="signOut()" *ngIf="isSignedIn"><mat-icon>logout</mat-icon><span>Log out</span></button>
+
+    </mat-menu>
+    <!--   <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+   <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button> -->
+
+</mat-toolbar>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>
